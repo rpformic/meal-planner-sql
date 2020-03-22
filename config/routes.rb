@@ -2,7 +2,9 @@
 Rails.application.routes.draw do
   get 'home/index'
 
-  resources :recipes
+  resources :recipes do
+    resources :ingredients
+  end
 
   root 'home#index'
 end
